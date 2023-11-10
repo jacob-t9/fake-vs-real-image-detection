@@ -11,19 +11,19 @@ The dataset was obtained from Kaggle (https://www.kaggle.com/datasets/birdy654/c
 
 ## Model
 
-The project utilises a custom Sequential model constructed using Keras tuner. The model first includes a convolutional layer where the number of filters and kernel size are values to be tuned, followed by a pooling layer which is then flattened. Then there is two dense layers where the number of neurons and activation functions are to be tuned parameters. Finally, the model's learning rate and optimizer type are hyperparameter tuned values. The goal of the model is to be capable of accurately classifying images as either real or AI-generated.
+The project utilises a custom Sequential model constructed using Keras tuner. The model first includes a convolutional layer where the number of filters and kernel size are values to be tuned, followed by a pooling layer which is then flattened. Then there are two dense layers where the number of neurons and activation functions are to be tuned parameters. Finally, the model's learning rate and optimizer type are hyperparameter-tuned values. The goal of the model is to be capable of accurately classifying images as either real or AI-generated.
 
 ## Hyperparameter Optimisation
 
 The following hyperparameters are tuned using Keras tuner:
 
-Number of filters in convolutional layer: Values from 20 and 100 with a step of 20 are tested to determine the optimal number of filters for the convolutional layer.
+Number of filters in the convolutional layer: Values from 20 and 100 with a step of 20 are tested to determine the optimal number of filters for the convolutional layer.
 
 Kernel size in convolutional layer: An integer between 2 and 4 is tested for the optimal size of the kernel in the convolutional layer.
 
 Dense layer input neurons: Values from 100 and 1000 with a step of 100 are tested to find the optimal number of neurons in each of the two dense layers.
 
-Activation functions: The choice of activation functions for each dense layer are between 'ReLU' and 'tanh'.
+Activation functions: The choice of activation functions for each dense layer are 'ReLU' and 'tanh'.
 
 Learning rate: Three learning rates are tested during the tuning process, values 0.001, 0.0005 and 0.0001.
 
